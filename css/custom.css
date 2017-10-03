@@ -25,6 +25,13 @@ body {
   background-color: #ECF0F1;
 }
 
+.carousel-item > .d-block {
+  filter: brightness(70%);
+}
+
+.carousel-item {
+  max-height: 400px;
+}
 
 .jumbotron {
   padding-top: 6rem;
@@ -88,7 +95,7 @@ footer a:hover{
   padding: 2em;
 }
 .footer-top{
-  background: #2d4958;  
+  background: transparent;  
 }
 .footer-middle{
    background: #3d6277;
