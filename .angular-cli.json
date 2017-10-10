@@ -19,9 +19,25 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "lib/bootstrap/css/bootstrap.min.css",
+        "lib/font-awesome/css/font-awesome.min.css",
+        "scss/style.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "lib/jquery/jquery.min.js",
+        "lib/superfish/hoverIntent.js",
+        "lib/superfish/superfish.min.js",
+        "lib/tether/js/tether.min.js",
+        "lib/stellar/stellar.min.js",
+        "lib/bootstrap/js/bootstrap.min.js",
+        "lib/counterup/counterup.min.js",
+        "lib/waypoints/waypoints.min.js",
+        "lib/easing/easing.js",
+        "lib/stickyjs/sticky.js",
+        "lib/parallax/parallax.js",
+        "lib/lockfixed/lockfixed.min.js",
+        "js/custom.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -51,7 +67,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }
