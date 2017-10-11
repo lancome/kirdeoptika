@@ -51,6 +51,7 @@ a:hover {
     text-decoration: none !important;
 }
 .scrolltop {
+  z-index: 100;
     display: none;
     position: fixed;
     bottom: 15px;
@@ -127,9 +128,9 @@ a:hover {
 #header {
   background: $color-primary;
   height: 70px;
-  
+
   #logo {
-    margin: 14px 25px 0 0; 
+    margin: 14px 25px 0 0;
     h1 {
       font-size: 36px;
       margin: 0;
@@ -140,32 +141,32 @@ a:hover {
       letter-spacing: 3px;
       text-transform: uppercase;
     }
-    
+
     h1 a, h1 a:hover {
       color: #fff;
     }
-    
+
     img {
       padding: 0;
       margin: 0;
       max-height: 40px;
     }
   }
-  @media (max-width: 1199px) {
+  @media (max-width: 992px) {
     height: 50px;
     #logo {
-      margin: 10px 0 0 0; 
+      margin: 10px 0 0 0;
       h1 {
         padding: 2px 0;
         font-size: 26px;
       }
-      
-      img { 
+
+      img {
         max-height: 30px;
       }
     }
   }
-  
+
   .social-nav {
     margin-top: 15px;
     a {
@@ -190,7 +191,7 @@ a:hover {
     padding: 0;
     list-style: none;
   }
-    
+
   ul {
     position: absolute;
     display: none;
@@ -198,26 +199,26 @@ a:hover {
     left: 0;
     z-index: 99;
   }
-    
+
   li {
     position: relative;
     white-space: nowrap;
   }
-    
+
   > li {
     float: left;
   }
-    
+
   li:hover > ul,
   li.sfHover > ul {
     display: block;
   }
-    
+
   ul ul {
     top: 0;
     left: 100%;
   }
-    
+
   ul li {
     min-width: 180px;
   }
@@ -228,7 +229,7 @@ a:hover {
   .sf-with-ul {
     padding-right: 30px;
   }
-    
+
   .sf-with-ul:after {
     content: "\f107";
     position: absolute;
@@ -237,7 +238,7 @@ a:hover {
     font-style: normal;
     font-weight: normal;
   }
-    
+
   ul .sf-with-ul:after {
     content: "\f105";
   }
@@ -246,7 +247,7 @@ a:hover {
 /* Nav Meu Container */
 #nav-menu-container {
   margin: 0;
-  @media (max-width: 1199px) {
+  @media (max-width: 992px) {
     display: none;
   }
 }
@@ -259,27 +260,27 @@ a:hover {
     display: inline-block;
     color: #fff;
     font-family: $font-secondary;
-    font-weight: 500;   
+    font-weight: 500;
     font-size: 16px;
     outline: none;
   }
-    
+
   a:hover, li:hover > a, .menu-active > a  {
     color: rgba(0, 0, 0, .9);
     // background: $color-secondary;
   }
-    
+
   ul {
     margin: 4px 0 0 15px;
     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.08);
-      
+
     li {
       background: #fff;
       border-top:  1px solid #f4f4f4;
       &:first-child {
         border-top: 0;
       }
-      
+
       &:hover {
         background: $color-primary;
         transition: 0.3s;
@@ -295,7 +296,7 @@ a:hover {
       }
 
     }
-    
+
     ul {
       margin: 0;
     }
@@ -308,7 +309,7 @@ a:hover {
   right: 0;
   top: 0;
   z-index: 999;
-  margin: 8px 10px 0 0;
+  margin: 3px;
   border: 0;
   background: none;
   font-size: 24px;
@@ -316,35 +317,39 @@ a:hover {
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
-  
+
   i {
     color: $color-kirde;
+    padding: 0.25rem 0.75rem;
+    border: 2px solid $color-kirde;
+    border-radius: 0.25rem;
+
   }
-    
-  @media (max-width: 1199px) {
-    display: inline; 
+
+  @media (max-width: 992px) {
+    display: inline;
   }
-    
+
 }
 
 /* Mobile Nav Styling */
 #mobile-nav {
   position: fixed;
   top: 0;
-  padding-top: 18px;
+  padding-top: 40px;
   bottom: 0;
   z-index: 998;
-  background: rgba(0, 0, 0, 0.9); 
+  background: rgba(0, 0, 0, 0.9);
   left: -260px;
   width: 260px;
   overflow-y: auto;
   transition: 0.4s;
-    
+
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    
+
     li {
       position: relative;
       a {
@@ -361,12 +366,12 @@ a:hover {
           color: #fff;
         }
       }
-      
+
       li {
         padding-left: 30px;
       }
     }
-    
+
     .menu-has-children i {
       position: absolute;
       right: 0;
@@ -378,7 +383,7 @@ a:hover {
         color: $color-primary;
       }
     }
-    
+
     .menu-item-active {
       color: $color-primary;
     }
@@ -386,13 +391,13 @@ a:hover {
 }
 
 #mobile-body-overly {
-  width:100%; 
-  height:100%; 
+  width:100%;
+  height:100%;
   z-index:997;
-  top:0; 
-  left:0; 
-  position:fixed; 
-  background: rgba(0, 0, 0, 0.6); 
+  top:0;
+  left:0;
+  position:fixed;
+  background: rgba(0, 0, 0, 0.6);
   display: none;
 }
 
@@ -400,11 +405,11 @@ a:hover {
 body {
   &.mobile-nav-active {
     overflow: hidden;
-    
+
     #mobile-nav {
       left: 0;
     }
-    
+
     #mobile-nav-toggle {
       color: #fff;
     }
@@ -711,30 +716,30 @@ body {
     }
 
   padding: 80px 0;
-  
+
   h2 {
     font-family: $font-primary;
-    color: #fff;    
+    color: #fff;
   }
 
-  .info {    
+  .info {
     i {
       font-size: 32px;
       float: left;
-      color: $color-secondary;      
+      color: $color-secondary;
     }
     p {
       color: #fff;
-      
+
       padding: 0 0 10px 50px;
       line-height: 24px;
-      
+
     }
-    
+
   }
-  
+
   .form {
-    
+
     #sendmessage {
       color: $color-primary;
       border:1px solid $color-primary;
@@ -758,7 +763,7 @@ body {
     #sendmessage.show, #errormessage.show, .show {
       display:block;
     }
-    
+
     .validation {
       color: red;
       display:none;
@@ -766,13 +771,13 @@ body {
       font-weight:400;
       font-size:13px;
     }
-    
+
     input, textarea {
       border-radius: 0;
       box-shadow: none;
 
     }
-    
+
     button[type="submit"] {
       background: $color-primary;
       border: 0;
@@ -834,7 +839,7 @@ body {
             }
         }
     }
-    
+
     .credits {
       color: #ddd;
       a {

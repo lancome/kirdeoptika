@@ -8,9 +8,18 @@
 
 		<div class="row">
 
-			<div class="col-md-4 offset-md-4">
+			<div class="col-md-5 offset-md-1 py-2" id="map">
+				<agm-map  [latitude]="coordinates[0]" [longitude]="coordinates[1]" [zoom]="zoom">
+					<agm-marker [latitude]="coordinates[0]" [longitude]="coordinates[1]"></agm-marker>
+					<agm-marker [latitude]="coordinates[2]" [longitude]="coordinates[3]"></agm-marker>
+					<agm-marker [latitude]="coordinates[4]" [longitude]="coordinates[5]"></agm-marker>
+					<agm-marker [latitude]="coordinates[6]" [longitude]="coordinates[7]"></agm-marker>
+				</agm-map>
+			</div>
+
+			<div class="col-md-5 py-2">
 				<div class="form">
-					<div id="sendmessage">Your message has been sent. Thank you!</div>
+					<div id="sendmessage">Сообщение отправлено, спасибо!</div>
 					<div id="errormessage"></div>
 					<form action="" method="post" role="form" class="contactForm">
 						<div class="form-group">
@@ -38,7 +47,7 @@
 	</div>
 </section>
 
-<footer class="site-footer">
+<footer class="site-footer" id="glass">
 	<div class="bottom">
 		<div class="container">
 			<div class="row">
